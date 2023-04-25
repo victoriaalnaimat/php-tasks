@@ -40,9 +40,9 @@ $url = 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_12
         $ext = pathinfo($url, PATHINFO_EXTENSION); // to get extension
         $name2 =pathinfo($url, PATHINFO_FILENAME); //file name without extension
 
-        echo $name ."<br/>";
-        echo $ext ."<br/>";
-        echo $name2 ."<br/>";
+        echo $name ."<br>";
+        echo $ext ."<br>";
+        echo $name2 ."<br>";
 //ex2
 $path = 'www.example.com/public_html/index.php';
         $file_name = substr(strrchr($path, "/"), 1);
@@ -51,18 +51,18 @@ $path = 'www.example.com/public_html/index.php';
 //ex3
 $path = "/testweb/home.php";
     //Show filename
-echo basename($path) ."<br/>";
+echo basename($path) ."<br>";
     //Show filename, but cut off file extension for ".php" files
-echo basename($path, ".php")."<br/>";
+echo basename($path, ".php")."<br>";
 
 //q5-------------------------------------------------------------
 $mailid  = 'ahmed@example.com';
 $user = strstr($mailid, '@', true);
-echo $user."\n"."<br/>";
+echo $user."<br>";
 
 //q6-------------------------------------------------------------
 $str1 = 'orange coding academy';
-echo substr($str1, -3)."\n"."<br/>";
+echo substr($str1, -3)."<br>";
 
 //q7-------------------------------------------------------------
 function password_generate($chars)
@@ -70,25 +70,23 @@ function password_generate($chars)
     $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
     return substr(str_shuffle($data), 0, $chars);
 }
-echo password_generate(7)."\n"."<br/>";
+echo password_generate(7)."<br>";
 
 //q8-------------------------------------------------------------
   $str = 'the quick brown fox jumps over the lazy dog.';
-  echo preg_replace('/the/', 'That', $str, 1)."\n"."<br/>";
+  echo preg_replace('/the/', 'That', $str, 1)."<br>";
 
 //q9-------------------------------------------------------------
 $str1 = 'football';
 $str2 = 'footboll';
 $str_pos = strspn($str1 ^ $str2, "\0");
-printf('First difference between two strings at position %d: "%s" vs "%s"',
+printf( 'First difference between two strings at position %d: "%s" vs "%s"',
         $str_pos, $str1[$str_pos], $str2[$str_pos]
-);
-printf("\n");
-"<br/>";
+)."<br>";
 //q10-------------------------------------------------------------
-$str = "Twinkle, twinkle, little star,\nHow I wonder what you are.\nUp above the world so high,\nLike a diamond in the sky.";
+$str = "Twinkle, twinkle, little star,\n How I wonder what you are.\nUp above the world so high,\nLike a diamond in the sky.";
 $arra1 = explode("<br>", $str);
-var_dump($arra1)."<br/>"; //to view the array
+var_dump($arra1)."<br>"; //to view the array
 
 //q11-------------------------------------------------------------
 $cha = 'a';
@@ -98,7 +96,7 @@ if (strlen($next_cha) > 1)
 {
  $next_cha = $next_cha[0];
  }
-echo $next_cha."\n"."<br/>";
+echo $next_cha."<br>";
 
 //q12-------------------------------------------------------------
 $original_string = 'The brown fox';
