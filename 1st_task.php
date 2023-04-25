@@ -53,7 +53,22 @@ $path = "/testweb/home.php";
     //Show filename
 echo basename($path) ."<br/>";
     //Show filename, but cut off file extension for ".php" files
-echo basename($path, ".php");
+echo basename($path, ".php")."<br/>";
+//q5-------------------------------------------------------------
+$mailid  = 'ahmed@example.com';
+$user = strstr($mailid, '@', true);
+echo $user."\n"."<br/>";
+
+//q6-------------------------------------------------------------
+$str1 = 'orange coding academy';
+echo substr($str1, -3)."\n"."<br/>";
+//q6-------------------------------------------------------------
+function password_generate($chars)
+{
+  $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
+  return substr(str_shuffle($data), 0, $chars);
+}
+  echo password_generate(7)."\n"."<br/>";
 ?>
 </body>
 </html>
