@@ -65,12 +65,12 @@ $str1 = 'orange coding academy';
 echo substr($str1, -3)."<br>";
 
 //q7-------------------------------------------------------------
-function password_generate($chars)
+function passgeeeee($chars)
 {
     $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
     return substr(str_shuffle($data), 0, $chars);
 }
-echo password_generate(7)."<br>";
+echo passgeeeee(7)."<br>";
 
 //q8-------------------------------------------------------------
   $str = 'the quick brown fox jumps over the lazy dog.';
@@ -80,22 +80,20 @@ echo password_generate(7)."<br>";
 $str1 = 'football';
 $str2 = 'footboll';
 $str_pos = strspn($str1 ^ $str2, "\0");
-printf( 'First difference between two strings at position %d: "%s" vs "%s"',
-        $str_pos, $str1[$str_pos], $str2[$str_pos]
+printf('First difference between two strings at position %d: "%s" vs "%s"', $str_pos, $str1[$str_pos], $str2[$str_pos]
 )."<br>";
 //q10-------------------------------------------------------------
-$str = "Twinkle, twinkle, little star,\n How I wonder what you are.\nUp above the world so high,\nLike a diamond in the sky.";
+$str = "Twinkle, twinkle, little star,\n How I wonder you are.\nabove the world so high,\nLike a diamond in the sky.";
 $arra1 = explode("<br>", $str);
-var_dump($arra1)."<br>"; //to view the array
+//var_dump($arra1)."<br>"; //to view the array
 
 //q11-------------------------------------------------------------
 $cha = 'a';
-$next_cha = ++$cha; 
+$next_cha = ++$cha;
 //The following if condition prevent you to go beyond 'z' or 'Z' and will reset to 'a' or 'A'.
-if (strlen($next_cha) > 1) 
-{
- $next_cha = $next_cha[0];
- }
+if (strlen($next_cha) > 1) {
+    $next_cha = [0];
+}
 echo $next_cha."<br>";
 
 //q12-------------------------------------------------------------
@@ -111,8 +109,7 @@ echo rtrim("14522354265300000000000", "0"); // outputs: 145223542653
 //q14-------------------------------------------------------------
 $sub_string = 'rayy@';
 $str = 'rayy@example.com';
-if (substr($str, 0, strlen($sub_string)) == $sub_string) 
-{
+if (substr($str, 0, strlen($sub_string)) == $sub_string) {
  $str = substr($str, strlen($sub_string));
 }
 echo $str."\n";
@@ -129,17 +126,17 @@ $cleanStr = preg_replace('/[^A-Za-z0-9]/', '', $string);
 
 //q17-------------------------------------------------------------
 $my_string = 'The quick brown fox jumps over the lazy dog';
-echo implode(' ', array_slice(explode(' ', $my_string), 0, 5))."\n";
+echo implode(' ', array_slice(explode(' ', $my_string), 0, 5))."<br>";
 
 //q18-------------------------------------------------------------
 $str1 = "2,543.12";
 $x = str_replace(',', '', $str1);
-if (is_numeric($x)) {echo $x."\n";}
+if (is_numeric($x)) {echo $x."<br>";}
 
 //q19-------------------------------------------------------------
 for ($x = ord('a'); $x <= ord('z'); $x++) {
     echo chr($x);
-    echo "\n";
+    echo "<br>";
 }
 ?>
 </body>
