@@ -54,6 +54,7 @@ $path = "/testweb/home.php";
 echo basename($path) ."<br/>";
     //Show filename, but cut off file extension for ".php" files
 echo basename($path, ".php")."<br/>";
+
 //q5-------------------------------------------------------------
 $mailid  = 'ahmed@example.com';
 $user = strstr($mailid, '@', true);
@@ -62,7 +63,8 @@ echo $user."\n"."<br/>";
 //q6-------------------------------------------------------------
 $str1 = 'orange coding academy';
 echo substr($str1, -3)."\n"."<br/>";
-//q6-------------------------------------------------------------
+
+//q7-------------------------------------------------------------
 function password_generate($chars)
 {
   $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
