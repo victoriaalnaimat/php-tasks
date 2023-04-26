@@ -70,6 +70,165 @@
     var_dump(test3(37));
 
     echo "<br>";
+    //q6------------------------------------------------------------
+    echo "Q6.  ";
+    function test4($x, $y)
+    {
+        return ($x <= 20 || $y >= 50) || ($y <= 20 || $x >= 50);
+    }
+    var_dump(test4(20, 84));
+    var_dump(test4(14, 50));
+    var_dump(test4(11, 45));
+    var_dump(test4(25, 40));
+
+    echo "<br>";
+    //q7------------------------------------------------------------
+    echo "Q7.  ";
+    function test5($x, $y, $z)
+    {
+        $max = max($x, max($y, $z));
+        return $max;
+    }
+    echo test5(1, 2, 3) . "\n";
+    echo test5(1, 3, 2) . "\n";
+    echo test5(1, 1, 1) . "\n";
+    echo test5(1, 2, 2) . "\n";
+
+    echo "<br>";
+    //85------------------------------------------------------------
+    echo "Q8.  ";
+    $amount = '';
+    $kwh_usage = '';
+    if (isset($_POST['submit'])) {
+        $units = $_POST['kwh'];
+        if (!empty($units)) {
+            $kwh_usage = calculateElectricityBill($units);
+            $amount = '<strong>Total amount of ' . $units . ' units -</strong> ' . $kwh_usage;
+        }
+    }
+    /**
+     * To calculate electricity bill as per unit cost
+     */
+    function calculateElectricityBill($units)
+    {
+        $firstUnitCost = 8;
+        $secondUnitCost = 12;
+        $thirdUnitCost = 16;
+        $fourthUnitCost = 20;
+
+        if ($units <= 100) {
+            $bill = $units * $firstUnitCost;
+        } elseif ($units > 100 && $units <= 200) {
+            $temp = 100 * $firstUnitCost;
+            $remainingUnits = $units - 100;
+            $bill = $temp + ($remainingUnits * $secondUnitCost);
+        } elseif ($units > 200 && $units <= 300) {
+            $temp = (100 * $firstUnitCost) + (100 * $secondUnitCost);
+            $remainingUnits = $units - 200;
+            $bill = $temp + ($remainingUnits * $thirdUnitCost);
+        } else {
+            $temp = (100 * $firstUnitCost) + (100 * $secondUnitCost) + (100 * $thirdUnitCost);
+            $remainingUnits = $units - 300;
+            $bill = $temp + ($remainingUnits * $fourthUnitCost);
+        }
+        return number_format((float)$bill, 2, '.', '');
+    }
+    echo "<br>";
+    //q9------------------------------------------------------------
+    echo "Q9.  ";
+    $firstNum = $_POST['firstNum'];
+    $secondNum = $_POST['secondNum'];
+    $operator = $_POST['operator'];
+    $result = '';
+    if (is_numeric($firstNum) && is_numeric($secondNum)) {
+        switch ($operator) {
+            case "Add":
+                $result = $firstNum + $secondNum;
+                break;
+            case "Subtract":
+                $result = $firstNum - $secondNum;
+                break;
+            case "Multiply":
+                $result = $firstNum * $secondNum;
+                break;
+            case "Divide":
+                $result = $firstNum / $secondNum;
+        }
+    }
+    echo "<br>";
+    //q10------------------------------------------------------------
+    echo "Q10.  ";
+    function checkVote() //function has been declared
+    {
+        $name = "Rashed";
+        $age = 19;
+        if ($age >= 18) {
+            echo $name . ", you Are Eligible For Vote";
+        } else {
+            echo $name . ", you are not eligible for vote. ";
+        }
+    }
+    checkVote(); //function has been called
+    echo "<br>";
+    //q11------------------------------------------------------------
+    echo "Q11.  ";
+    function checkNumber($x)
+    {
+        if ($x > 0) {
+            $message = "Positive number";
+        }
+        if ($x == 0) {
+            $message = "Zero";
+        }
+        if ($x < 0) {
+            $message = "Negative number";
+        }
+        echo $message . "\n";
+    }
+
+    checkNumber(5.5);
+    checkNumber(-10.8);
+    echo "<br>";
+    //q12------------------------------------------------------------
+    echo "Q12.  ";
+    // PHP Script to Calculate Total Marks of Student and Display Grade
+
+    // These are the marks of five subjects
+    $sub_1 = 95;
+    $sub_2 = 85;
+    $sub_3 = 74;
+    $sub_4 = 64;
+    $sub_5 = 53;
+
+    $total = null;
+    $average = null;
+    $percentage = null;
+    $grade = null;
+
+    // It will calculate total, average, percentage, and grade
+    $total = $sub_1 + $sub_2 + $sub_3 + $sub_4 + $sub_5;
+    $average = $total / 5.0;
+    $percentage = ($total / 500.0) * 100;
+
+    if ($average >= 90) {
+        $grade = "A";
+    } elseif ($average >= 80 && $average < 90) {
+        $grade = "B";
+    } elseif ($average >= 70 && $average < 80) {
+        $grade = "C";
+    } elseif ($average >= 60 && $average < 70) {
+        $grade = "D";
+    } else {
+        $grade = "E";
+    }
+
+    // It will print the final output
+    echo "The Total marks   = " . $total . "/500\n";
+    echo "The Average marks = " . $average . "\n";
+    echo "The Percentage    = " . $percentage . "%\n";
+    echo "The Grade         = '" . $grade . "'\n";
+
+    echo "<br>";
     ?>
 </body>
 
