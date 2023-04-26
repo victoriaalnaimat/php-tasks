@@ -143,7 +143,7 @@ $cleanStr = preg_replace('/[^A-Za-z0-9]/', '', $string);
 //q17-------------------------------------------------------------
 echo "Q17.  ";
 $my_string = 'The quick brown fox jumps over the lazy dog';
-echo implode(' ', array_slice(explode(' ', $my_string), 0, 5))."<br>";
+echo implode(' ', array_slice(explode(' ', $my_string), 0, 5))."<br>";//implode is the oppisit of explode
 
 //q18-------------------------------------------------------------
 echo "Q18.  ";
