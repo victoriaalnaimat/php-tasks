@@ -68,7 +68,7 @@
     $b = 27;
 
     // Swap Logic
-    
+
     echo "\nThe number before swapping is:\n";
     echo "Number a =" . $a . " and b=" . $b;
 
@@ -86,13 +86,13 @@
         $sum = 0;
         $temp = $number;
         $numDigits = strlen((string) $number);
-    
+
         while ($temp > 0) {
             $digit = $temp % 10;
             $sum += pow($digit, $numDigits);
             $temp = (int) ($temp / 10);
         }
-    
+
         if ($sum == $number) {
             return true;
         } else {
@@ -108,23 +108,27 @@
     echo "<br>";
     //q7------------------------------------------------------------
     echo "Q7.  ";
-    function palindrome($n)
+    function palindrome($number)
     {
-        $number = $n;
-        $sum = 0;
-        while (floor($number)) {
-            $rem = $number % 10;
-            $sum = $sum * 10 + $rem;
-            $number = $number / 10;
+        $temp = $number;
+        $new = 0;
+        while (floor($temp)) {
+            $d = $temp % 10;
+            $new = $new * 10 + $d;
+            $temp = $temp / 10;
         }
-        return $sum;
+        if ($new == $number) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
-    $input = 1235321;
-    $num = palindrome($input);
-    if ($input == $num) {
-        echo "$input is a Palindrome number";
+    // Driver Code
+    $original = 1441;
+    if (palindrome($original)) {
+        echo "Palindrome";
     } else {
-        echo "$input is not a Palindrome";
+        echo "Not a Palindrome";
     }
     echo "<br>";
     //q8------------------------------------------------------------
