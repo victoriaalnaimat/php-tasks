@@ -136,7 +136,7 @@
     echo "<br>";
     //q9------------------------------------------------------------
     echo "Q9.  ";
-    $firstNum = $_POST['firstNum'];
+    /* $firstNum = $_POST['firstNum'];
     $secondNum = $_POST['secondNum'];
     $operator = $_POST['operator'];
     $result = '';
@@ -154,7 +154,13 @@
             case "Divide":
                 $result = $firstNum / $secondNum;
         }
-    }
+    }*/
+$oldFigure = 14;
+$newFigure = 12.50;
+
+$percentChange = (1 - $oldFigure / $newFigure) * 100;
+
+echo $percentChange;
     echo "<br>";
     //q10------------------------------------------------------------
     echo "Q10.  ";
