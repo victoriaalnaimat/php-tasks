@@ -81,24 +81,30 @@
     echo "<br>";
     //q6------------------------------------------------------------
     echo "Q6.  ";
-    function armstrongnumber($num)
+    function isArmstrongNumber($number)
     {
-        $sl = strlen($num);
         $sum = 0;
-        $num = (string) $num;
-        for ($i = 0; $i < $sl; $i++) {
-            $sum = $sum + pow((string) $num { $i}, $sl);
+        $temp = $number;
+        $numDigits = strlen((string) $number);
+    
+        while ($temp > 0) {
+            $digit = $temp % 10;
+            $sum += pow($digit, $numDigits);
+            $temp = (int) ($temp / 10);
         }
-        if ((string) $sum == (string) $num) {
-            return "True";
+    
+        if ($sum == $number) {
+            return true;
         } else {
-            return "False";
+            return false;
         }
     }
-    echo "Is 153 Armstrong number? " . armstrongnumber(153);
-    echo "\nIs 21 Armstrong number? " . armstrongnumber(21);
-    echo "\nIs 4587 Armstrong number? " . armstrongnumber(4587);
-    "\n";
+    $number = 407;
+    if (isArmstrongNumber($number)) {
+        echo $number . " is Armstrong number";
+    } else {
+        echo $number . " is not Armstrong number";
+    }
     echo "<br>";
     //q7------------------------------------------------------------
     echo "Q7.  ";
