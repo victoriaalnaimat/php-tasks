@@ -59,17 +59,18 @@
     echo "<br>";
     //q5------------------------------------------------------------
     echo "Q5.  ";
-function test3($n)
-{
-   return $n % 3 == 0 ;
-}
+    function test3($n)
+    {
+        return $n % 3 == 0;
+    }
 
-var_dump(test3(3));
-var_dump(test3(14));
-var_dump(test3(12));
-var_dump(test3(37));
+    var_dump(test3(3));
+    var_dump(test3(14));
+    var_dump(test3(12));
+    var_dump(test3(37));
 
     echo "<br>";
     ?>
 </body>
+
 </html>
