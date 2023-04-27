@@ -113,5 +113,4 @@ Write a PHP script to display the first element of the above array*/
     echo "<br>";
     ?>
 </body>
-
 </html>
