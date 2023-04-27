@@ -237,5 +237,4 @@ echo $percentChange;
     echo "<br>";
     ?>
 </body>
-
 </html>
