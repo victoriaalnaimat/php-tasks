@@ -1,5 +1,5 @@
 <?php
-// Set the cookie with name, value, and expiration time
+// Set the cookie with name, value or id, and expiration time
 setcookie("my_cookie", "Hello World!", time() + 3600);
 
 // Output a message to confirm that the cookie was set
